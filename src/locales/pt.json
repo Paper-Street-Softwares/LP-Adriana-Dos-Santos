@@ -18,12 +18,12 @@
     "ctaButtonTextResponsive": "Contato"
   },
   "hero": {
-    "miniTag": "A_Definir",
-    "title": "A_Definir <span class=\"text-primary font-bold\">A_Definir</span>",
-    "subtitle": "A_Definir",
-    "ctaButtonText": "A_Definir",
+    "miniTag": "ADVOGADA CRIMINALISTA",
+    "title": "Vença antes mesmo <span class=\"text-primary font-bold\">do julgamento</span>",
+    "subtitle": "Com defesa estratégica e rápida, você recupera o controle da sua vida desde o primeiro momento.",
+    "ctaButtonText": "Comece sua defesa",
     "obsHero": {
-      "text": "A_Definir"
+      "text": "Atendimento presencial somente com hora marcada."
     }
   },
   "features": {
