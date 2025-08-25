@@ -20,7 +20,7 @@ export default function Index() {
   const showUnderConstruction = false;
 
   // Altere esta constante para: 'default', 'light' ou 'dark'
-  const colorMode = "light";
+  const colorMode = "default";
   const { t, i18n } = useTranslation();
 
   const changeLanguage = (lng) => {
@@ -65,11 +65,11 @@ export default function Index() {
 
       <Features
         colorMode={colorMode}
-        defaultFeature={false}
+        defaultFeature={true}
         button={false}
         modalWithCards={false}
         paragraphs={false}
-        sixCards={true}
+        sixCards={false}
         paragraphsModal={false}
       />
 
