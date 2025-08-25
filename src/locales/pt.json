@@ -11,7 +11,7 @@
       "home": "Início",
       "service": "Serviços",
       "about": "Sobre Nós",
-      "blog":"Blog",
+      "blog": "Blog",
       "faq": "Perguntas Frequentes",
       "maps": "Mapa"
     },
@@ -34,7 +34,7 @@
     "card1": {
       "title": "Direito Criminal",
       "subtitle": "Nossa principal área de atuação.",
-      "description": "- Inquérito Policial – acompanhamento desde o início da investigação, garantindo os direitos do investigado. <br/><br/> - Defesa em Flagrante – atuação imediata em casos de prisão em flagrante. <br/><br/> - Audiência de Custódia – defesa pela liberdade e análise de possíveis abusos ou ilegalidades. <br/><br/> - Medidas Protetivas (Lei Maria da Penha) – solicitação e acompanhamento para mulheres em situação de violência. <br/><br/> - Tráfico de Drogas – defesa técnica em investigações e processos por tráfico ou associação. <br/><br/> - Crimes contra a Pessoa – homicídio, lesão corporal, ameaça e demais delitos. <br/><br/> - Crimes contra o Patrimônio – furto, roubo, estelionato, receptação. <br/><br/> - Execução Penal – progressão de regime, livramento condicional, indulto e acompanhamento na prisão. ",
+      "description": "<strong>- Inquérito Policial:</strong> <br/> – acompanhamento desde o início da investigação, garantindo os direitos do investigado. <br/><br/> <strong>- Defesa em Flagrante:</strong><br/> – atuação imediata em casos de prisão em flagrante. <br/><br/> <strong>- Audiência de Custódia:</strong><br/> – defesa pela liberdade e análise de possíveis abusos ou ilegalidades. <br/><br/> <strong>- Medidas Protetivas (Lei Maria da Penha):</strong><br/> – solicitação e acompanhamento para mulheres em situação de violência. <br/><br/> <strong>- Tráfico de Drogas:</strong><br/> – defesa técnica em investigações e processos por tráfico ou associação. <br/><br/> <strong>- Crimes contra a Pessoa: </strong><br/> – homicídio, lesão corporal, ameaça e demais delitos. <br/><br/> <strong>- Crimes contra o Patrimônio:</strong> <br/>– furto, roubo, estelionato, receptação. <br/><br/> <strong>- Execução Penal:</strong><br/> – progressão de regime, livramento condicional, indulto e acompanhamento na prisão. ",
       "buttonLabelModal": "A_Definir",
       "buttonLabel": "Entenda como te ajudo"
     },

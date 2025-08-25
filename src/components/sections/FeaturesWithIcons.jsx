@@ -42,7 +42,7 @@ export default function FeaturesWithIcons({ colorMode }) {
           i18nKey={`features.${cardKey}.description`}
           components={{ br: <br /> }}
         />
-        <div className="mt-4">
+        <div className="mt-6">
           <Button
             aria-label="Abrir WhatsApp"
             label="Falar no WhatsApp"
