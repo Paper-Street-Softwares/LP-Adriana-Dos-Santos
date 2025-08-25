@@ -1,16 +1,17 @@
 {
   "infos": {
-    "adress": "A_Definir <br/> A_Definir",
+    "adress": "R. Helena Sapori Faluba, <br/> nº 193 - Veneza,  <br/> Ribeirão das Neves - MG, <br/> CEP: 33820-170",
     "adressSecundario": "A_Definir",
-    "expediente": "Segunda a sexta-feira: <br/> A_Definir",
+    "expediente": "Segunda a sexta-feira: <br/> 9h às 18h ",
     "expedienteSecundario": "A_Definir",
-    "obs": "A_Definir"
+    "obs": "Atendimento 24h em casos de prisões em flagrante."
   },
   "navbar": {
     "menuItems": {
       "home": "Início",
       "service": "Serviços",
       "about": "Sobre Nós",
+      "blog": "Blog",
       "faq": "Perguntas Frequentes",
       "maps": "Mapa"
     },
@@ -18,45 +19,45 @@
     "ctaButtonTextResponsive": "Contato"
   },
   "hero": {
-    "miniTag": "A_Definir",
-    "title": "A_Definir <span class=\"text-primary font-bold\">A_Definir</span>",
-    "subtitle": "A_Definir",
-    "ctaButtonText": "A_Definir",
+    "miniTag": "ADVOGADA CRIMINALISTA",
+    "title": "Vença antes mesmo <span class=\"text-primary font-bold\">do julgamento</span>",
+    "subtitle": "Com defesa estratégica e rápida, você recupera o controle da sua vida desde o primeiro momento.",
+    "ctaButtonText": "Comece sua defesa",
     "obsHero": {
-      "text": "A_Definir"
+      "text": "Atendimento presencial somente com hora marcada."
     }
   },
   "features": {
-    "miniTag": "A_Definir",
-    "title": "A_Definir",
-    "subtitle": "A_Definir",
+    "miniTag": "ÁREAS DE ATUAÇÃO",
+    "title": "Defendendo seus direitos em diversas áreas jurídicas",
+    "subtitle": "Atuação dedicada e estratégica para oferecer soluções jurídicas completas.",
     "card1": {
-      "title": "A_Definir",
-      "subtitle": "A_Definir",
-      "description": "A_Definir",
+      "title": "Direito Criminal",
+      "subtitle": "Nossa principal área de atuação.",
+      "description": "<strong>- Inquérito Policial:</strong> <br/> – acompanhamento desde o início da investigação, garantindo os direitos do investigado. <br/><br/> <strong>- Defesa em Flagrante:</strong><br/> – atuação imediata em casos de prisão em flagrante. <br/><br/> <strong>- Audiência de Custódia:</strong><br/> – defesa pela liberdade e análise de possíveis abusos ou ilegalidades. <br/><br/> <strong>- Medidas Protetivas (Lei Maria da Penha):</strong><br/> – solicitação e acompanhamento para mulheres em situação de violência. <br/><br/> <strong>- Tráfico de Drogas:</strong><br/> – defesa técnica em investigações e processos por tráfico ou associação. <br/><br/> <strong>- Crimes contra a Pessoa: </strong><br/> – homicídio, lesão corporal, ameaça e demais delitos. <br/><br/> <strong>- Crimes contra o Patrimônio:</strong> <br/>– furto, roubo, estelionato, receptação. <br/><br/> <strong>- Execução Penal:</strong><br/> – progressão de regime, livramento condicional, indulto e acompanhamento na prisão. ",
       "buttonLabelModal": "A_Definir",
-      "buttonLabel": "A_Definir"
+      "buttonLabel": "Entenda como te ajudo"
     },
     "card2": {
-      "title": "A_Definir",
-      "subtitle": "A_Definir",
+      "title": "Direito de Família",
+      "subtitle": "Divórcio, guarda, pensão alimentícia.",
       "description": "A_Definir",
       "buttonLabelModal": "A_Definir",
-      "buttonLabel": "A_Definir"
+      "buttonLabel": "Saiba mais"
     },
     "card3": {
-      "title": "A_Definir",
-      "subtitle": "A_Definir",
+      "title": "Direito Previdenciário",
+      "subtitle": "Aposentadorias, benefícios por incapacidade, salário maternidade.",
       "description": "A_Definir",
       "buttonLabelModal": "A_Definir",
-      "buttonLabel": "A_Definir"
+      "buttonLabel": "Saiba mais"
     },
     "card4": {
-      "title": "A_Definir",
-      "subtitle": "A_Definir",
+      "title": "Direito Trabalhista",
+      "subtitle": "Rescisões, horas extras, verbas trabalhistas.",
       "description": "A_Definir",
       "buttonLabelModal": "A_Definir",
-      "buttonLabel": "A_Definir",
+      "buttonLabel": "Saiba mais",
       "servicesButton": "A_Definir"
     },
     "card5": {
@@ -84,22 +85,22 @@
     "imagem": {
       "alt": "imagem about"
     },
-    "miniTag": "A_Definir",
-    "title": "A_Definir",
-    "subtitle": "A_Definir",
+    "miniTag": "QUEM É A DRA. ADRIANA DOS SANTOS",
+    "title": "Minha trajetória",
+    "subtitle": "Do sonho à advocacia, uma história de luta, coragem e dedicação.",
     "buttonModalLabelAbout": "Continuar lendo",
-    "paragraph":"A_Definir",
-    "modal": "a_Definir",
+    "paragraph": "Vim de uma família humilde, sem facilidades ou padrinhos. Cada conquista foi fruto de esforço, coragem e dedicação. Hoje, transformo minha história em propósito: lutar por quem precisa de justiça.",
+    "modal": "Vim de uma família humilde, sem facilidades ou padrinhos. Cada conquista foi fruto de esforço, coragem e dedicação. Hoje, transformo minha história em propósito: lutar por quem precisa de justiça. <br/> <br/> Meus clientes me escolhem porque encontram mais que uma advogada: encontram acolhimento, clareza e estratégia. Aqui, cada pessoa é ouvida e cada caso é tratado com atenção real. <br/> <br/> Atuo rápido e próximo de quem enfrenta medo ou momentos delicados. Do primeiro contato à audiência ou execução penal, meu diferencial é unir técnica e humanidade para gerar confiança.",
     "ctaButtonAriaLabel": "",
     "ctaButtonText": "Entre em contato",
     "aboutSocial": {
-      "miniTag": "A_Definir",
-      "title": "A_Definir",
-      "subtitle": "A_Definir",
-      "labelInstagram": "A_Definir",
-      "labelFacebook": "A_Definir",
-      "labelLinkedin": "A_Definir",
-      "labelX": "A_Definir"
+      "miniTag": "REDES SOCIAIS",
+      "title": "Conecte-se agora mesmo",
+      "subtitle": "Aproveite nossas redes sociais para mantermos contato e ficar por dentro de atualizações importantes no mundo do direito.",
+      "labelInstagram": "Siga-me no Instagram",
+      "labelFacebook": "Siga-me no Facebook",
+      "labelLinkedin": "Siga-me no LinkedIn",
+      "labelX": "Siga-me no X"
     }
   },
   "ctaSecondary": {
@@ -136,12 +137,10 @@
     }
   },
   "blog": {
-    "miniTag": "A_Definir",
-    "title": "A_Definir",
-    "subtitle": "A_Definir",
-    "labelCards": "A_Definir",
-    "label": "A_Definir",
-    "blogLink": "A_Definir"
+    "miniTag": "BLOG",
+    "title": "Informação jurídica ao seu alcance",
+    "subtitle": "Acompanhe conteúdos exclusivos para manter-se sempre informado.",
+    "label": "Clique aqui para ver todas as matérias"
   },
   "faq": {
     "miniTag": "TIRE SUAS DÚVIDAS",
