@@ -27,36 +27,36 @@
     }
   },
   "features": {
-    "miniTag": "A_Definir",
-    "title": "A_Definir",
-    "subtitle": "A_Definir",
+    "miniTag": "ÁREAS DE ATUAÇÃO",
+    "title": "Defendendo seus direitos em diversas áreas jurídicas",
+    "subtitle": "Atuação dedicada e estratégica para oferecer soluções jurídicas completas.",
     "card1": {
-      "title": "A_Definir",
-      "subtitle": "A_Definir",
-      "description": "A_Definir",
+      "title": "Direito Criminal",
+      "subtitle": "Nossa principal área de atuação.",
+      "description": "- Inquérito Policial – acompanhamento desde o início da investigação, garantindo os direitos do investigado. <br/><br/> - Defesa em Flagrante – atuação imediata em casos de prisão em flagrante. <br/><br/> - Audiência de Custódia – defesa pela liberdade e análise de possíveis abusos ou ilegalidades. <br/><br/> - Medidas Protetivas (Lei Maria da Penha) – solicitação e acompanhamento para mulheres em situação de violência. <br/><br/> - Tráfico de Drogas – defesa técnica em investigações e processos por tráfico ou associação. <br/><br/> - Crimes contra a Pessoa – homicídio, lesão corporal, ameaça e demais delitos. <br/><br/> - Crimes contra o Patrimônio – furto, roubo, estelionato, receptação. <br/><br/> - Execução Penal – progressão de regime, livramento condicional, indulto e acompanhamento na prisão. ",
       "buttonLabelModal": "A_Definir",
-      "buttonLabel": "A_Definir"
+      "buttonLabel": "Entenda como te ajudo"
     },
     "card2": {
-      "title": "A_Definir",
-      "subtitle": "A_Definir",
+      "title": "Direito de Família",
+      "subtitle": "Divórcio, guarda, pensão alimentícia.",
       "description": "A_Definir",
       "buttonLabelModal": "A_Definir",
-      "buttonLabel": "A_Definir"
+      "buttonLabel": "Saiba mais"
     },
     "card3": {
-      "title": "A_Definir",
-      "subtitle": "A_Definir",
+      "title": "Direito Previdenciário",
+      "subtitle": "Aposentadorias, benefícios por incapacidade, salário maternidade.",
       "description": "A_Definir",
       "buttonLabelModal": "A_Definir",
-      "buttonLabel": "A_Definir"
+      "buttonLabel": "Saiba mais"
     },
     "card4": {
-      "title": "A_Definir",
-      "subtitle": "A_Definir",
+      "title": "Direito Trabalhista",
+      "subtitle": "Rescisões, horas extras, verbas trabalhistas.",
       "description": "A_Definir",
       "buttonLabelModal": "A_Definir",
-      "buttonLabel": "A_Definir",
+      "buttonLabel": "Saiba mais",
       "servicesButton": "A_Definir"
     },
     "card5": {
