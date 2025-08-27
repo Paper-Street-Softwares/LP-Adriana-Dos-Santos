@@ -32,7 +32,7 @@ export default function Index() {
   }
 
   return (
-    <>
+    <div className="no-dark">
       {/* <div className="fixed inset-x-0 bottom-5 flex justify-center z-50 pointer-events-none">
         <div className="flex gap-4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg pointer-events-auto">
           <Button
@@ -84,6 +84,6 @@ export default function Index() {
       <FooterSocial colorMode={colorMode} addres={true} obs={true} />
       <FloatingWhatsappButton />
       <BackToTopButton />
-    </>
+    </div>
   );
 }
