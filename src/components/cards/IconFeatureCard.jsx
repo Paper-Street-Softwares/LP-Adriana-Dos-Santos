@@ -1,17 +1,16 @@
 export default function IconFeatureCard(props) {
   const { icon, title, paragraph, className, children, colorMode } = props;
 
-  // Definir classes de cor com base no modo
-
+  // Classes de fundo e texto com dark
   const bgClassesIcon = {
-    dark: "bg-primary",
-    light: "bg-minititle",
-    default: "bg-primary",
+    dark: "bg-primary dark:bg-primary",
+    light: "bg-minititle dark:bg-minititle",
+    default: "bg-primary dark:bg-primary",
   };
   const textClasses = {
-    dark: "text-white",
-    light: "text-black",
-    default: "text-black",
+    dark: "text-white dark:text-white",
+    light: "text-black dark:text-black",
+    default: "text-black dark:text-black",
   };
 
   const bgClass = bgClassesIcon[colorMode] || bgClassesIcon.default;
@@ -21,7 +20,6 @@ export default function IconFeatureCard(props) {
     <div
       className={`w-full tablet1:min-h-[300px] p-0 tablet1:w-[290px] mt-[36px] tablet1:mt-0 desktop1:w-[260px] desktop1:h-[300px] flex flex-col items-center desktop1:hover:scale-110 transition desktop1:p-0 ${className}`}
     >
-
       <div
         className={`h-[64px] w-[64px] mb-[24px] rounded-md flex justify-center items-center text-labelButtons ${bgClass}`}
       >

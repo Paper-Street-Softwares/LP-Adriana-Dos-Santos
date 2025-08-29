@@ -59,18 +59,22 @@ export default function Button({
         <MotionDivDownToUp className="w-auto">
           <button
             onClick={onClick}
-            className={`flex ${className} ${sizeFeatures} shadow-custom-opacityButton shadow-shadowHero/20 ${
-              color || "bg-buttonColor"
-            } flex-row items-center justify-around transition text-labelButtons desktop1:hover:scale-110`}
+            className={`flex ${className} ${sizeFeatures} shadow-custom-opacityButton shadow-shadowHero/20
+              ${color || "bg-buttonColor"} flex-row items-center justify-around transition
+              text-labelButtons dark:text-labelButtons desktop1:hover:scale-110`}
           >
             <div
               className={`flex items-center text-center ${gap} min-h-[24px]`}
             >
-              {icon && <div className={`${buttonColor}`}>{icon}</div>}
+              {icon && (
+                <div className={`${buttonColor} dark:text-labelButtons`}>
+                  {icon}
+                </div>
+              )}
               <p
                 className={`flex items-center ${textSizeClass} ${
                   labelColor || buttonColor
-                } ${textclassName}`}
+                } ${textclassName} dark:text-labelButtons`}
               >
                 {label}
               </p>
@@ -81,16 +85,22 @@ export default function Button({
         <div className="w-auto">
           <button
             onClick={onClick}
-            className={`flex ${className} ${sizeFeatures} shadow-custom-opacityButton shadow-shadowHero/20 bg-buttonColor flex-row items-center justify-around transition ${color} text-labelButtons desktop1:hover:scale-110`}
+            className={`flex ${className} ${sizeFeatures} shadow-custom-opacityButton shadow-shadowHero/20 
+              ${color || "bg-buttonColor"} flex-row items-center justify-around transition 
+              text-labelButtons dark:text-labelButtons desktop1:hover:scale-110`}
           >
             <div
               className={`flex items-center text-center ${gap} min-h-[24px]`}
             >
-              {icon && <div className={`${buttonColor}`}>{icon}</div>}
+              {icon && (
+                <div className={`${buttonColor} dark:text-labelButtons`}>
+                  {icon}
+                </div>
+              )}
               <p
                 className={`flex items-center ${textSizeClass} ${
                   labelColor || buttonColor
-                } ${textclassName}`}
+                } ${textclassName} dark:text-labelButtons`}
               >
                 {label}
               </p>

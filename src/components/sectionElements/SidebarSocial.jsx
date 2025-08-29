@@ -50,6 +50,10 @@ export default function SidebarSocial({ colorMode, mode = "blog" }) {
     <MapPin />,
   ];
 
+  // Classes fixas de tema para evitar alteração pelo dark mode do navegador
+  const bgClass = "bg-bgSectionDark dark:bg-bgSectionDark";
+  const textClass = "text-primary dark:text-primary";
+
   return (
     <div className="inset-0 z-10 flex">
       <div
@@ -61,9 +65,7 @@ export default function SidebarSocial({ colorMode, mode = "blog" }) {
 
       <div className="flex justify-center card">
         <AlignJustify
-          className={`p-button-rounded p-button-outlined lg:hidden ${
-            colorMode ? "text-primary" : "text-primary"
-          } w-[40px] h-[40px]`}
+          className={`p-button-rounded p-button-outlined lg:hidden ${textClass} w-[40px] h-[40px]`}
           onClick={() => setVisible(true)}
         />
 
@@ -74,11 +76,7 @@ export default function SidebarSocial({ colorMode, mode = "blog" }) {
           content={({ closeIconRef, hide }) => (
             <div
               id="app-sidebar-2"
-              className={`${
-                colorMode
-                  ? "bg-bgSectionDark"
-                  : "absolute top-0 left-0 flex-shrink-0 h-screen border-r-[1px] select-none bg-bgSectionDark surface-section lg:hidden lg:static z-1 surface-border border-neutral-700"
-              }`}
+              className={`${bgClass} absolute top-0 left-0 flex-shrink-0 h-screen border-r-[1px] select-none lg:hidden lg:static z-1 surface-border border-neutral-700`}
               style={{ width: "280px" }}
             >
               <div className="flex flex-col h-full">
@@ -97,9 +95,7 @@ export default function SidebarSocial({ colorMode, mode = "blog" }) {
                       onClick={(e) => hide(e)}
                       rounded
                       outlined
-                      className={`${
-                        colorMode ? "text-primary" : "text-primary"
-                      }`}
+                      className={textClass}
                     >
                       <X size={32} />
                     </Button>
@@ -111,7 +107,7 @@ export default function SidebarSocial({ colorMode, mode = "blog" }) {
                   <ul className="p-3 m-0 list-none">
                     <li>
                       <ul
-                        className={`p-0 m-0 -mt-[16px] overflow-hidden font-medium text-primary list-none text-paragraph3 font-mainFont`}
+                        className={`p-0 m-0 -mt-[16px] overflow-hidden font-medium ${textClass} list-none text-paragraph3 font-mainFont`}
                       >
                         {visibleSections.map(({ id, label }, index) => (
                           <li key={id}>
