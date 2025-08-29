@@ -12,7 +12,7 @@ import RedesSociais from "../sectionElements/aboutInstagram/RedesSociais";
 export default function AboutInstagram({ socialPrint, colorMode }) {
   const { t } = useTranslation();
 
-  // Definir classes de tema
+  // Classes fixas de tema
   const bgClasses = {
     dark: "bg-bgFixedDark",
     light: "bg-bgFixedLight",
@@ -23,8 +23,11 @@ export default function AboutInstagram({ socialPrint, colorMode }) {
     light: "text-black",
     default: "text-white",
   };
+
+  // Definições finais
   const bgClass = bgClasses[colorMode] || bgClasses.default;
   const textClass = textClasses[colorMode] || textClasses.default;
+  const subtitleClass = colorMode === "light" ? "text-black/80" : "text-white";
 
   return (
     <SectionArea id="about" className={`${bgClass}`} paddingtop={false}>
@@ -34,19 +37,22 @@ export default function AboutInstagram({ socialPrint, colorMode }) {
         ) : (
           <DefaultInstagram colorMode={colorMode} />
         )}
+
         <div className="desktop1:w-[550px] desktop2:w-[570px]">
           <MotionDivDownToUp>
             <SectionHeader
-              className={`text-center`}
+              className="text-center"
               miniTitle={t("about.aboutSocial.miniTag")}
               sectionHeaderTitle={t("about.aboutSocial.title")}
               sectionHeaderSubtitle={t("about.aboutSocial.subtitle")}
               type="article"
               titleColorSet={textClass}
-              subtitleColorSet={textClass}
+              subtitleColorSet={subtitleClass}
             />
           </MotionDivDownToUp>
+
           <ParagraphsAboutSocial colorMode={colorMode} />
+
           <div>
             <RedesSociais
               instagram={true}

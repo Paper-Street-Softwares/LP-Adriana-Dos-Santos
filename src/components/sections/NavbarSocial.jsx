@@ -9,7 +9,7 @@ import ListGroupSocial from "../sectionElements/ListGroupSocial";
 import { useTranslation } from "react-i18next";
 
 export default function NavbarSocial({ colorMode, mode }) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const navigate = useNavigate();
   const [scrolling, setScrolling] = useState(false);
@@ -18,54 +18,21 @@ export default function NavbarSocial({ colorMode, mode }) {
   const [showMenuIcon, setShowMenuIcon] = useState(true);
   const [showSidebarContent, setShowSidebarContent] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
-  const [navbarBgWhite, setNavbarBgWhite] = useState(false);
 
   const sidebarRef = useRef(null);
 
-  const handleScroll = () => {
-    const isScrolling = window.scrollY > 0;
-    setScrolling(isScrolling);
-    setNavbarBgWhite(isScrolling);
-  };
-
-  const toggleSidebar = () => {
-    if (!isAnimating) {
-      setIsAnimating(true);
-      setShowMenuIcon((prev) => !prev);
-      setShowSidebarContent((prev) => !prev);
-      if (showSidebar) {
-        setTimeout(() => {
-          setShowSidebar(false);
-          setIsAnimating(false);
-        }, 940);
-      } else {
-        setShowSidebar(true);
-        setTimeout(() => {
-          setIsAnimating(false);
-        }, 0);
-      }
-    }
-  };
-
-  const handleResize = () => {
-    setShowListGroup(window.innerWidth >= 768);
-  };
-
+  const handleScroll = () => setScrolling(window.scrollY > 0);
+  const handleResize = () => setShowListGroup(window.innerWidth >= 768);
   const handleClickOutside = (event) => {
     if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
       handleCloseSidebar();
     }
   };
-
   const handleCloseSidebar = () => {
     setShowSidebar(false);
     setShowSidebarContent(false);
     setIsAnimating(false);
     setShowMenuIcon(true);
-  };
-
-  const handleSidebarItemClick = () => {
-    handleCloseSidebar();
   };
 
   useEffect(() => {
@@ -83,25 +50,23 @@ export default function NavbarSocial({ colorMode, mode }) {
   const getNavbarClasses = () => {
     if (colorMode === "light") {
       return scrolling
-        ? "bg-bgSectionOpacityLight shadow-md"
-        : "bg-transparent desktop1:bg-transparent";
+        ? "bg-bgSectionOpacityLight shadow-md dark:bg-bgSectionOpacityLight"
+        : "bg-transparent desktop1:bg-transparent dark:bg-transparent";
     }
     if (colorMode === "dark") {
       return scrolling
-        ? "bg-gradient-to-b from-black to-bgFixedDark shadow-lg border-b-[1px] border-primary"
-        : "bg-gradient-to-b from-black to-bgFixedDark border-b-[1px] border-none";
+        ? "bg-gradient-to-b from-black to-bgFixedDark shadow-lg border-b-[1px] border-primary dark:from-black dark:to-bgFixedDark"
+        : "bg-gradient-to-b from-black to-bgFixedDark border-b-[1px] border-none dark:from-black dark:to-bgFixedDark";
     }
     // default
     return scrolling
-      ? "bg-gradient-to-b from-black to-bgSectionDark bg-opacity-100 shadow-lg border-b-[1px] border-primary"
-      : "bg-gradient-to-b from-black to-transparent border-b-[1px] border-none";
+      ? "bg-gradient-to-b from-black to-bgSectionDark bg-opacity-100 shadow-lg border-b-[1px] border-primary dark:from-black dark:to-bgSectionDark"
+      : "bg-gradient-to-b from-black to-transparent border-b-[1px] border-none dark:from-black dark:to-transparent";
   };
 
   return (
     <div className="w-full">
-      <div
-        className={`fixed z-20 w-full transition-colors duration-1000 ${getNavbarClasses()}`}
-      >
+      <div className={`fixed z-20 w-full transition-colors duration-1000 ${getNavbarClasses()}`}>
         <Navbar>
           <ScrollLink
             to="home"
@@ -126,8 +91,8 @@ export default function NavbarSocial({ colorMode, mode }) {
           <div className="flex items-center justify-between gap-[16px]">
             <div className="hidden tablet1:flex desktop1:hidden">
               <Button
-                aria-label={t("hero.ctaButtonAriaLabel")} // traduzido
-                label={t("navbar.ctaButtonTextResponsive")} // traduzido
+                aria-label={t("hero.ctaButtonAriaLabel")}
+                label={t("navbar.ctaButtonTextResponsive")}
                 size="small"
                 icon={
                   <svg
@@ -148,9 +113,7 @@ export default function NavbarSocial({ colorMode, mode }) {
             </div>
           </div>
 
-          {showListGroup && (
-            <ListGroupSocial colorMode={colorMode} mode={mode} />
-          )}
+          {showListGroup && <ListGroupSocial colorMode={colorMode} mode={mode} />}
         </Navbar>
       </div>
     </div>

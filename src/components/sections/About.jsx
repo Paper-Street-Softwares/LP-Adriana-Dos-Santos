@@ -28,9 +28,18 @@ export default function About({
     light: "text-black",
     default: "text-white",
   };
-  const bgClass = bgClasses[colorMode] || bgClasses.default;
-  const titleColor = textClasses[colorMode] || textClasses.default;
-  const subtitleColor = colorMode === "light" ? "text-black/80" : "text-white";
+
+  // Ajuste automático para darkMode do navegador
+  const bgClass = `${
+    bgClasses[colorMode] || bgClasses.default
+  } dark:bg-bgSectionDark`;
+  const titleColor = `${
+    textClasses[colorMode] || textClasses.default
+  } dark:text-white`;
+  const subtitleColor =
+    colorMode === "light"
+      ? "text-black/80 dark:text-white/80"
+      : "text-white dark:text-white";
 
   // Puxando apenas textos via i18n
   const aboutText = t("about", { returnObjects: true });

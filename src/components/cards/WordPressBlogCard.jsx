@@ -1,25 +1,48 @@
 import MotionDivDownToUp from "../animation/MotionDivDownToUp";
 import BlogButton from "../interactives/BlogButton";
 
-export default function WordPressBlogCard({ img, title, subtitle, link }) {
+export default function WordPressBlogCard({
+  img,
+  title,
+  subtitle,
+  link,
+  colorMode = "default",
+}) {
+  // Definir cores fixas para manter o mesmo visual em qualquer modo
+  const bgClasses = {
+    dark: "bg-bgSectionLight dark:bg-bgSectionLight",
+    light: "bg-bgSectionLight dark:bg-bgSectionLight",
+    default: "bg-bgSectionLight dark:bg-bgSectionLight",
+  };
+
+  const textClasses = {
+    dark: "text-black dark:text-black",
+    light: "text-black dark:text-black",
+    default: "text-black dark:text-black",
+  };
+
+  const bgClass = bgClasses[colorMode] || bgClasses.default;
+  const titleColor = textClasses[colorMode] || textClasses.default;
+  const subtitleColor = "text-colorBlack/60 dark:text-colorBlack/60"; // mantendo tom do subtítulo
+
   return (
     <div>
       <MotionDivDownToUp>
         <div
           id="cardBlog"
-          className="w-[290px] phone2:w-[300px] phone3:w-[350px] tablet1:w-[400px] font-mainFont flex flex-col desktop1:max-w-[500px] desktop3:max-w-[375px] bg-bgSectionLight rounded-2xl p-[20px]"
+          className={`w-[290px] phone2:w-[300px] phone3:w-[350px] tablet1:w-[400px] font-mainFont flex flex-col desktop1:max-w-[500px] desktop3:max-w-[375px] rounded-2xl p-[20px] ${bgClass}`}
         >
           <div className="w-full max-h-[220px] tablet1:h-[300px] flex justify-center items-center overflow-hidden rounded-2xl">
             <div className="w-full">{img}</div>
           </div>
           <h1
-            className="mt-4 text-title1 leading-[25px] font-medium mb-[12px]"
+            className={`mt-4 text-title1 leading-[25px] font-medium mb-[12px] ${titleColor}`}
             title="blogTitle"
           >
             {title}
           </h1>
           <h2
-            className="text-paragraph2 desktop2:text-paragraph3 mb-[32px] text-colorBlack/60 leading-[18px] desktop1:leading-[21px]  "
+            className={`text-paragraph2 desktop2:text-paragraph3 mb-[32px] leading-[18px] desktop1:leading-[21px] ${subtitleColor}`}
             title="blogSubtitle"
           >
             {subtitle}

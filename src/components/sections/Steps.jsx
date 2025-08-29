@@ -10,23 +10,27 @@ import MotionDivDownToUp from "../animation/MotionDivDownToUp";
 export default function Steps({ colorMode }) {
   const { t } = useTranslation();
 
-  // Classes de tema
+  // Classes de tema fixas (ignoram dark mode do navegador)
   const bgClasses = {
     dark: "bg-bgFixedDark",
     light: "bg-bgFixedLight",
     default: "bg-bgSectionDark",
   };
-  const textClasses = {
-    dark: "text-white",
-    light: "text-black",
-    default: "text-white",
-  };
   const bgClass = bgClasses[colorMode] || bgClasses.default;
-  const titleColor = textClasses[colorMode] || textClasses.default;
+
+  const titleColor =
+    colorMode === "light"
+      ? "text-black dark:text-black"
+      : "text-white dark:text-white";
+  const subtitleColor =
+    colorMode === "light"
+      ? "text-black dark:text-black"
+      : "text-white dark:text-white";
 
   return (
     <SectionArea className={`${bgClass}`} paddingbot={false}>
       <SectionWrapper className="flex flex-col desktop1:flex-row-reverse gap-[40px] desktop2:gap-0 desktop1:justify-between">
+        {/* Imagem com fundo fixo */}
         <MotionDivDownToUp className="relative w-[90%] desktop1:w-[415px] desktop2:w-[450px] flex justify-center rounded-xl shadow-custom-opacity shadow-shadowSteps/10">
           <img
             src={content.texts.steps.img}
@@ -36,6 +40,7 @@ export default function Steps({ colorMode }) {
         </MotionDivDownToUp>
 
         <div className="desktop1:w-[550px] desktop2:w-[570px]">
+          {/* Header desktop */}
           <SectionHeader
             className="hidden text-center desktop1:flex"
             miniTitle={t("steps.miniTag")}
@@ -43,17 +48,20 @@ export default function Steps({ colorMode }) {
             sectionHeaderSubtitle={t("steps.subtitle")}
             type="article"
             titleColorSet={titleColor}
+            subtitleColorSet={subtitleColor}
           />
+          {/* Header mobile */}
           <SectionHeader
             className="text-center desktop1:hidden"
             miniTitle={t("steps.miniTag")}
             sectionHeaderTitle={t("steps.title")}
             sectionHeaderSubtitle={t("steps.subtitle")}
-            color={colorMode ? "light" : ""}
-            type={colorMode ? "" : "article"}
+            type="article"
             titleColorSet={titleColor}
+            subtitleColorSet={subtitleColor}
           />
 
+          {/* Cards */}
           <div className="flex flex-wrap w-full justify-between gap-[32px] mt-[28px] desktop1:mt-0">
             <HowItWorksCard
               number={t("steps.cards.card1.stepNumber")}

@@ -9,23 +9,25 @@ import AccordionExpandDefault from "../interactives/AcordionTwo";
 import Button from "../interactives/Button";
 import content from "../../content/content";
 
-export default function Faq({ colorMode }) {
+export default function Faq({ colorMode = "default" }) {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  // Classes de tema
+  // Cores fixas (mantendo o mesmo visual mesmo em dark mode do navegador)
   const bgClasses = {
     dark: "bg-bgSectionOpacityDark",
     light: "bg-bgSectionOpacityLight",
     default: "squares",
   };
   const textClasses = {
-    dark: "text-white",
-    light: "text-black",
-    default: "text-black",
+    dark: "text-white dark:text-white",
+    light: "text-black dark:text-black",
+    default: "text-black dark:text-black",
   };
+
   const bgClass = bgClasses[colorMode] || bgClasses.default;
   const titleColor = textClasses[colorMode] || textClasses.default;
+  const subtitleColor = textClasses[colorMode] || textClasses.default;
 
   return (
     <SectionArea id="faq" className={`${bgClass}`}>
@@ -36,7 +38,7 @@ export default function Faq({ colorMode }) {
         sectionHeaderTitle={t("faq.title")}
         sectionHeaderSubtitle={t("faq.subtitle")}
         titleColorSet={titleColor}
-        subtitleColorSet={titleColor}
+        subtitleColorSet={subtitleColor}
       />
       <SectionWrapper className="flex justify-center">
         <MotionDivDownToUp className="flex justify-center w-full">
@@ -45,7 +47,7 @@ export default function Faq({ colorMode }) {
           </div>
         </MotionDivDownToUp>
         <MotionDivDownToUp>
-          <Paragraphs className={`text-center transition`}>
+          <Paragraphs className={`text-center transition ${subtitleColor}`}>
             <Button
               className="hoover:scale-0 desktop1:hover:scale-10 transition-all duration-300"
               color=""

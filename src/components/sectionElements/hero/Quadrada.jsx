@@ -4,7 +4,7 @@ import Button from "../../interactives/Button";
 import { useTranslation } from "react-i18next";
 
 export default function Quadrada({ appDownloadButtons, colorMode }) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   // Definindo cores de fundo com base no tema
   const backgroundClasses = {
@@ -14,10 +14,24 @@ export default function Quadrada({ appDownloadButtons, colorMode }) {
   };
 
   const bgGradient = backgroundClasses[colorMode] || backgroundClasses.default;
-  const titleColor = colorMode === "light" ? "text-black" : "text-white";
-  const subtitleColor = colorMode === "light" ? "text-black" : "text-white";
-  const obsTextColor = colorMode === "light" ? "text-black" : "text-white";
-  const descriptionColor = colorMode === "light" ? "text-black" : "text-white";
+
+  // Repete a cor em ambos os modos (sem mudar no dark)
+  const titleColor =
+    colorMode === "light"
+      ? "text-black dark:text-black"
+      : "text-white dark:text-white";
+  const subtitleColor =
+    colorMode === "light"
+      ? "text-black dark:text-black"
+      : "text-white dark:text-white";
+  const obsTextColor =
+    colorMode === "light"
+      ? "text-black dark:text-black"
+      : "text-white dark:text-white";
+  const descriptionColor =
+    colorMode === "light"
+      ? "text-black dark:text-black"
+      : "text-white dark:text-white";
 
   return (
     <div
@@ -26,8 +40,8 @@ export default function Quadrada({ appDownloadButtons, colorMode }) {
     >
       <div className="relative z-10 flex w-full items-left">
         <div className="w-full text-secondary justify-evenly">
-          <div className="h-[140px] phone2:h-[140px] phone3:h-[140px] tablet1:h-[150px] desktop3:h-[120px] " />{" "}
-          <div className="flex flex-col-reverse gap-[40px] desktop1:flex-row desktop1:justify-between mx-auto w-[90%] max-w-[1215px] items-center pb-[64px]  desktop1:pt-[68px] desktop1:pb-[96px]">
+          <div className="h-[140px] phone2:h-[140px] phone3:h-[140px] tablet1:h-[150px] desktop3:h-[120px]" />
+          <div className="flex flex-col-reverse gap-[40px] desktop1:flex-row desktop1:justify-between mx-auto w-[90%] max-w-[1215px] items-center pb-[64px] desktop1:pt-[68px] desktop1:pb-[96px]">
             <div className="flex flex-col w-full desktop1:w-[50%] desktop1:mr-[20px]">
               {/* MiniTag preta */}
               <MotionDivDownToUp>

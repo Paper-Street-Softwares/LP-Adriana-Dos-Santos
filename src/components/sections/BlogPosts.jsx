@@ -8,7 +8,7 @@ import Paragraphs from "../sectionElements/Paragraphs";
 import MotionDivDownToUp from "../animation/MotionDivDownToUp";
 import content from "../../content/content";
 
-function BlogPosts() {
+function BlogPosts({ colorMode = "default" }) {
   const { t } = useTranslation();
   const [posts, setPosts] = useState([]);
 
@@ -21,9 +21,25 @@ function BlogPosts() {
       .catch((error) => console.error("Erro ao buscar posts:", error));
   }, []);
 
+  // Cores fixas
+  const bgClasses = {
+    dark: "bg-bgFixedDark",
+    light: "bg-bgFixedLight",
+    default: "bg-bgSectionDark",
+  };
+  const textClasses = {
+    dark: "text-black dark:text-black",
+    light: "text-white dark:text-white",
+    default: "text-black dark:text-black",
+  };
+
+  const bgClass = bgClasses[colorMode] || bgClasses.default;
+  const titleColor = textClasses[colorMode] || textClasses.light;
+  const subtitleColor = textClasses[colorMode] || textClasses.light;
+
   return (
     <div>
-      <SectionArea className="bg-bgSectionDark" id="blog">
+      <SectionArea className={`${bgClass}`} id="blog">
         <SectionWrapper>
           <SectionHeader
             className="text-center"
@@ -31,8 +47,6 @@ function BlogPosts() {
             sectionHeaderTitle={t("blog.title")}
             sectionHeaderSubtitle={t("blog.subtitle")}
             color=""
-            titleColorSet="text-white"
-            subtitleColorSet="text-white"
             type=""
           />
 
@@ -50,10 +64,14 @@ function BlogPosts() {
                     )
                   }
                   title={
-                    <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
+                    <h1
+                      className={titleColor}
+                      dangerouslySetInnerHTML={{ __html: post.title }}
+                    />
                   }
                   subtitle={
                     <p
+                      className={subtitleColor}
                       dangerouslySetInnerHTML={{
                         __html:
                           post.excerpt.length > 100
@@ -69,7 +87,9 @@ function BlogPosts() {
           </ul>
 
           <MotionDivDownToUp>
-            <Paragraphs className="text-center text-white underline transition hover:scale-110">
+            <Paragraphs
+              className={`text-center underline transition hover:scale-110 text-white dark:text-white `}
+            >
               <a
                 href={`https://${content.texts.blog.blogLink}`}
                 target="_blank"
